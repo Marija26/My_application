@@ -18,7 +18,7 @@ public class DBUtil {
                 Class.forName("org.postgresql.Driver");
                 connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "werter");
             } catch (ClassNotFoundException e){
-
+                e.printStackTrace();
             } catch (SQLException e) {
                 e.printStackTrace();
             }

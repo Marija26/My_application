@@ -6,18 +6,18 @@ import java.util.Date;
  * Created by Admin on 02.07.2017.
  */
 public class User {
-    private int userId;
+    private int userid;
     private String firstName;
     private String lastName;
     private Date dob;
     private String email;
 
-    public int getUserId() {
-        return userId;
+    public int getUserid() {
+        return userid;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUserid(int userid) {
+        this.userid = userid;
     }
 
     public String getFirstName() {
@@ -55,7 +55,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "userId=" + userId +
+                "userid=" + userid +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", dob=" + dob +

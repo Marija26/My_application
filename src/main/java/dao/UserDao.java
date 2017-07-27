@@ -52,7 +52,7 @@ public class UserDao {
             preparedStatement.setString(2, user.getLastName());
             preparedStatement.setDate(3, new Date(user.getDob().getTime()));
             preparedStatement.setString(4, user.getEmail());
-            preparedStatement.setInt(5, user.getUserId());
+            preparedStatement.setInt(5, user.getUserid());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -66,7 +66,7 @@ public class UserDao {
             ResultSet rs = statement.executeQuery("SELECT * FROM users");
             while(rs.next()){
                 User user = new User();
-                user.setUserId(rs.getInt("userid"));
+                user.setUserid(rs.getInt("userid"));
                 user.setFirstName(rs.getString("firstname"));
                 user.setLastName(rs.getString("lastname"));
                 user.setEmail(rs.getString("email"));
@@ -88,7 +88,7 @@ public class UserDao {
             ps.setInt(1, userId);
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
-                user.setUserId(rs.getInt("userid"));
+                user.setUserid(rs.getInt("userid"));
                 user.setFirstName(rs.getString("firstname"));
                 user.setLastName(rs.getString("lastname"));
                 user.setEmail(rs.getString("email"));
